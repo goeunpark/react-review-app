@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
 
 function App() {
+
+  const linkData = [
+    {
+      name: "About",
+      link: "about",
+      description: "Learn more about me, Goeun!"}, 
+    {
+      name: "Portfolio",
+      link: "portfolio",
+      description: "Look at all the code I wrote! Hire me! c;"
+    }
+  ];
+  const secretMessage = "I hate twizzlers!";
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header linkData={linkData} secret={secretMessage} />
+      {/* // call a header component, and inside the header component, 
+      // have two links based on data in linked data */}
     </div>
   );
 }
